@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">firebaseAuthExample</string>
+
+    <string name="sign_in">Войти</string>
+    <string name="sign_out">Выйти</string>
+    <string name="loading">Подключение…</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Пароь</string>
+    <string name="hint_login">Логин</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Крестики-нолики</string>
+    <string name="menu_tools">Аккаунт</string>
+    <string name="create_account">создать аккаунт</string>
+
+</resources>

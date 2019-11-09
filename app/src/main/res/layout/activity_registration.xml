@@ -1,0 +1,121 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/emailPasswordFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <EditText
+            android:id="@+id/fieldLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_login"
+            android:inputType="text"
+            android:maxLength="32"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/fieldEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_email"
+            android:inputType="text"
+            android:maxLength="32"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/fieldPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
+            android:hint="@string/hint_password"
+            android:inputType="text"
+            android:maxLength="32"
+            android:maxLines="1" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailPasswordButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailPasswordFields"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/emailPasswordFields">
+
+        <Button
+            android:id="@+id/emailCreateAccountButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/create_account"
+            android:theme="@style/ThemeOverlay.MyDarkButton" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Аккаунт уже создан ?" />
+
+            <TextView
+                android:id="@+id/entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="Войти"
+                android:textColor="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/errorInfo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
